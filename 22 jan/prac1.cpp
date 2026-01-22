@@ -8,6 +8,10 @@ int main()  {
     int sub = a - b;
     int mul = a * b;
     int div = a / b;
-    cout << add << " " << sub << " " << mul << " " << div << endl;
+    int mod = a % b;
+    int leftShitf = a << 2;
+    int rightShift = a >> 2;
+
+    cout << add << " " << sub << " " << mul << " " << div << " " << mod << " " << leftShitf << " " << rightShift << endl;
     return 0;
 }
