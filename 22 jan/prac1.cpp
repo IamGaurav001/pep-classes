@@ -37,6 +37,14 @@ int main() {
     }
     else if (op == '|') {
         cout << (a | b);
+    } else if (op == '&') {
+        cout << (a & b);
+    } else if (op == '^') {
+        cout << (a ^ b);
+    } else if (op == '~') {
+        cout << (~a);
+    } else if (op == '!') {
+        cout << (!a);
     }
     else {
         cout << "Invalid Op";
