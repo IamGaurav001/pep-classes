@@ -1,0 +1,22 @@
+739 - LeetCode 739. Daily Temperatures -> Medium
+
+class Solution {
+public:
+    vector<int> dailyTemperatures(vector<int>& t) {
+        int n = t.size();
+        vector<int> answer(n, 0);
+        stack<int> st;
+        
+        for(int i = 0; i < n; i++) {
+            while(!st.empty() && t[i] > t[st.top()]) {
+                int prevIndex = st.top();
+                st.pop();
+                answer[prevIndex] = i - prevIndex;
+            }
+            
+            st.push(i);
+        }
+        
+        return answer;
+    }
+};
